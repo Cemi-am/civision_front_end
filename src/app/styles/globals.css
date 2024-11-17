@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+body {
+    background-color: white;
+    color: black;
+    margin: 0;
+}
+
+a {
+    color: blue;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: lightblue;
+    text-decoration: underline;
+}
+
+header {
+background-color: black;
+color: white;
+padding: 20px;
+text-align: center;
+}
+
+button {
+    outline: 3px solid black;
+    padding: 5px;
+    margin: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 50px;
+}
