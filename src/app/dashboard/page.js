@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import FilterBar from "../components/FilterBar";
-import Price from "../components/Price";
 import Graphs from "../components/Graphs";
 
 export default function Page() {
