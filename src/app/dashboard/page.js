@@ -11,7 +11,7 @@ export default function Page() {
 
     useEffect(() => {
         const fetchDatabase = async () => {
-                const res = await fetch('/database.json');
+                const res = await fetch("/database.json");
                 const data = await res.json();
                 setData(data);
                 setFilteredData(data);
@@ -41,7 +41,7 @@ export default function Page() {
         }
         setFilteredData(filtered);
     };
-    
+
     return (
         <main>
             <FilterBar onFilterChange={handleFilter} />
