@@ -27,7 +27,6 @@ export default function Graphs({ data }) {
             labels: priceRanges.slice(0, -1).map((price, index) => `${price}-${priceRanges[index + 1]}`),
             datasets: [
                 {
-                    Title: "Nombre de personnes par rapport au prix",
                     label: "",
                     data: priceCounts,
                     fill: false,
@@ -52,7 +51,6 @@ export default function Graphs({ data }) {
             labels: ages.map((age) => `${age}`),
             datasets: [
                 {
-                    Title: "Nombre de personnes par rapport a l'age",
                     label: "",
                     data: ageCounts,
                     fill: false,
