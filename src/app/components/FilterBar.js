@@ -30,76 +30,108 @@ export default function FilterBar({ onFilterChange }) {
     <div className="filterbar">
       <h3>Filtrer les données</h3>
       <div>
-        <label>Saison: </label>
-        <select name="saison" onChange={handleFilter} value={filters.saison}>
-            <option value="">Tout</option>
-            <option value="été">Été</option>
-            <option value="printemps">Printemps</option>
-            <option value="automne">Automne</option>
-            <option value="hiver">Hiver</option>
+        <label htmlFor="saison">Saison: </label>
+        <select
+          id="saison"
+          name="saison"
+          onChange={handleFilter}
+          value={filters.saison}
+          aria-label="Saison selection"
+        >
+          <option value="">Tout</option>
+          <option value="été">Été</option>
+          <option value="printemps">Printemps</option>
+          <option value="automne">Automne</option>
+          <option value="hiver">Hiver</option>
         </select>
       </div>
       <div>
-        <label>Prix: </label>
+        <label htmlFor="prixMin">Prix: </label>
         <input
-            type="number"
-            name="prixMin"
-            placeholder="Min"
-            onChange={handleFilter}
-            value={filters.prixMin}
+          type="number"
+          id="prixMin"
+          name="prixMin"
+          placeholder="Min"
+          onChange={handleFilter}
+          value={filters.prixMin}
+          aria-label="Minimum price"
         />
         <input
-            type="number"
-            name="prixMax"
-            placeholder="Max"
-            onChange={handleFilter}
-            value={filters.prixMax}
-        />
-      </div>
-      <div>
-        <label>Age: </label>
-        <input
-            type="number"
-            name="ageMin"
-            placeholder="Min"
-            onChange={handleFilter}
-            value={filters.ageMin}
-        />
-        <input
-            type="number"
-            name="ageMax"
-            placeholder="Max"
-            onChange={handleFilter}
-            value={filters.ageMax}
+          type="number"
+          id="prixMax"
+          name="prixMax"
+          placeholder="Max"
+          onChange={handleFilter}
+          value={filters.prixMax}
+          aria-label="Maximum price"
         />
       </div>
       <div>
-        <label>Niveau: </label>
-        <select name="niveau" onChange={handleFilter} value={filters.niveau}>
+        <label htmlFor="ageMin">Age: </label>
+        <input
+          type="number"
+          id="ageMin"
+          name="ageMin"
+          placeholder="Min"
+          onChange={handleFilter}
+          value={filters.ageMin}
+          aria-label="Minimum age"
+        />
+        <input
+          type="number"
+          id="ageMax"
+          name="ageMax"
+          placeholder="Max"
+          onChange={handleFilter}
+          value={filters.ageMax}
+          aria-label="Maximum age"
+        />
+      </div>
+      <div>
+        <label htmlFor="niveau">Niveau: </label>
+        <select
+          id="niveau"
+          name="niveau"
+          onChange={handleFilter}
+          value={filters.niveau}
+          aria-label="Niveau selection"
+        >
           <option value="">Tout</option>
           <option value="pro">Pro</option>
           <option value="moyen">Moyen</option>
-            <option value="novice">novice</option>
+          <option value="novice">Novice</option>
         </select>
       </div>
       <div>
-        <label>Compte: </label>
-        <select name="compte" onChange={handleFilter} value={filters.compte}>
+        <label htmlFor="compte">Compte: </label>
+        <select
+          id="compte"
+          name="compte"
+          onChange={handleFilter}
+          value={filters.compte}
+          aria-label="Compte status selection"
+        >
           <option value="">Tout</option>
           <option value="true">Oui</option>
           <option value="false">Non</option>
         </select>
       </div>
       <div>
-        <label>Passe: </label>
-        <select name="passe" onChange={handleFilter} value={filters.passe}>
+        <label htmlFor="passe">Passe: </label>
+        <select
+          id="passe"
+          name="passe"
+          onChange={handleFilter}
+          value={filters.passe}
+          aria-label="Passe type selection"
+        >
           <option value="">Tout</option>
           <option value="double">Double</option>
           <option value="illimité">Illimité</option>
           <option value="simple">Simple</option>
         </select>
       </div>
-      <button onClick={applyFilters}>Appliquer</button>
+      <button onClick={applyFilters} aria-label="Apply filters">Appliquer</button>
     </div>
   );
 }
